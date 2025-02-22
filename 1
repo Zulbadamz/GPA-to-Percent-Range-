@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class GPAtoPercentRange {
+    public static void main(Srting [] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the student's GPA (0.0-4.0): ");
+
+        if (scanner.hasNextDouble()) {
+            double gpa = scanner.nextDouble();
+            String percentRange = getPercentRange(gpa)};
+
+            if (percentRange != null) {
+                System.out.println("The GPA " + gpa + " corresponds to: " percentRange);
+
+            } else {
+                System.out.println("Invalid GPA entered. Please enter a value between 0.0 and 4.0.");
+
+            }
+    } else {
+        System.out.println("Invalid input. Please enter a numeric GPA value between 0.0 and 4.0.");
+    }
+    scanner.close();
+}
+
+public static String getPercentRange(double gpa) {
+    switch ((int) (gpa * 10)) {
+        case 40: return "100% to 95.0%";
+        case 39: return "< 95.0% to 94.0%";
+        case 38: return "< 94.0% to 93.0%";
+        case 37: return "< 93.0% to 92.0%";
+        case 36: return "< 92.0% to 91.0%";
+        case 35: return "< 91.0% to 90.0%";
+        case 34: return "< 90.0% to 89.0%";
+        case 33: return "< 89.0% to 88.0%";
+        case 32: return "< 88.0% to 87.0%";
+        case 31: return "< 87.0% to 86.0%";
+        case 30: return "< 86.0% to 85.0%";
+        case 29: return "< 85.0% to 84.0%";
+        case 28: return "< 84.0% to 83.0%";
+        case 27: return "< 83.0% to 82.0%";
+        case 26: return "< 82.0% to 81.0%";
+        case 25: return "< 81.0% to 80.0%";
+        case 24: return "< 80.0% to 79.0%";
+        case 23: return "< 79.0% to 78.0%";
+        case 22: return "< 78.0% to 77.0%";
+        case 21: return "< 77.0% to 76.0%";
+        case 20: return "< 76.0% to 75.0%";
+        case 19: return "< 75.0% to 74.0%";
+        case 18: return "< 74.0% to 73.0%";
+        case 17: return "< 73.0% to 72.0%";
+        case 16: return "< 72.0% to 71.0%";
+        case 15: return "< 71.0% to 70.0%";
+        case 14: return "< 70.0% to 69.0%";
+        case 13: return "< 69.0% to 68.0%";
+        case 12: return "< 68.0% to 67.0%";
+        case 11: return "< 67.0% to 66.0%";
+        case 10: return "< 66.0% to 65.0%";
+        default: return "< 65.0% to 0.0%";
+    }
+}
